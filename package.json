@@ -1,12 +1,17 @@
 {
   "name": "gentamura-cli",
+  "description": "gentamura's information",
   "version": "1.0.0",
   "main": "dist/cli.js",
   "bin": {
     "gentamura": "./bin/main.js"
   },
-  "author": "gentamura",
+  "author": "Gen Tamura <gen.tamura84@gmail.com> (https://github.com/gentamura)",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gentamura/gentamura-cli/issues"
+  },
+  "homepage": "https://github.com/gentamura/gentamura-cli#readme",
   "scripts": {
     "build": "parcel build --no-source-maps -t node ./src/cli.tsx",
     "watch": "parcel watch -t node ./src/cli.tsx",
