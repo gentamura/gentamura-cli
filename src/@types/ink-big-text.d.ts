@@ -1,8 +1,8 @@
 import React from "react";
 
-type Props = {
+declare const BigText: React.FC<{
   text: string;
-  font:
+  font?:
     | "block"
     | "slick"
     | "tiny"
@@ -15,13 +15,13 @@ type Props = {
     | "simple3d"
     | "chrome"
     | "huge";
-  align: "left" | "center" | "right";
-  colors: string[];
-  backgroundColor: "transparent" | "black" | "red" | "green" | "yellow" | "blue" | "magenta" | "cyan" | "white";
-  letterSpacing: number;
-  lineHeight: number;
-  space: boolean;
-  maxLength: number;
-};
+  align?: "left" | "center" | "right";
+  colors?: string[];
+  backgroundColor?: "transparent" | "black" | "red" | "green" | "yellow" | "blue" | "magenta" | "cyan" | "white";
+  letterSpacing?: number;
+  lineHeight?: number;
+  space?: boolean;
+  maxLength?: number;
+}>;
 
-export default declare const BigText: (props: Props) => void;
+export default BigText;

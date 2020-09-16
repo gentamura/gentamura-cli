@@ -1,6 +1,7 @@
-import * as React from "react";
+import React from "react";
 import { Box, Text } from "ink";
 import SelectInput from "ink-select-input";
+import Gradient from "ink-gradient";
 import BigText from "ink-big-text";
 import open from "open/index";
 
@@ -61,7 +62,9 @@ const ItemView = ({ label, isSelected }) => (
 export default () => (
   <Box flexDirection="column" padding={1}>
     <Box>
-      <BigText color="#199861" text="I'm|a Web FrontEnd|Engineer." />
+      <Gradient name="rainbow">
+        <BigText text="I'm|a Front End Developer." />
+      </Gradient>
     </Box>
     <Box>
       <SelectInput items={items} onSelect={(item) => actions(item.label)} itemComponent={ItemView} />
