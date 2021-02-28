@@ -13,37 +13,21 @@
   },
   "homepage": "https://github.com/gentamura/gentamura-cli#readme",
   "scripts": {
-    "build": "parcel build --no-source-maps -t node ./src/cli.tsx",
-    "watch": "parcel watch -t node ./src/cli.tsx",
+    "build": "tsc",
+    "watch": "tsc -w",
     "start": "node ./dist/cli.js"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-react": "^7.10.4",
-    "@types/node": "^14.6.4",
-    "@types/react": "^16.9.49",
-    "parcel": "^1.12.4",
-    "typescript": "^4.0.2"
+    "@types/node": "^14.14.0",
+    "@types/react": "^16.14.0",
+    "typescript": "^4.2.0"
   },
   "dependencies": {
     "ink": "^3.0.5",
     "ink-big-text": "^1.2.0",
     "ink-gradient": "^2.0.0",
-    "ink-select-input": "^4.0.0",
-    "open": "^7.2.1",
-    "react": "^16.13.1"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react",
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": true
-          }
-        }
-      ]
-    ]
+    "ink-select-input": "^4.2.0",
+    "open": "^7.4.0",
+    "react": "^16.14.0"
   }
 }
