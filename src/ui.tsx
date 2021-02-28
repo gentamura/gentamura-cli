@@ -1,8 +1,6 @@
 import React from "react";
-import { Box, Text } from "ink";
+import { Box, Newline, Text } from "ink";
 import SelectInput from "ink-select-input";
-import Gradient from "ink-gradient";
-import BigText from "ink-big-text";
 import open from "open/index";
 
 const urls = {
@@ -16,6 +14,10 @@ const urls = {
 };
 
 const items = [
+  {
+    label: "Website",
+    value: urls.website,
+  },
   {
     label: "GitHub",
     value: urls.github,
@@ -60,14 +62,20 @@ const ItemView = ({ label, isSelected }) => (
 );
 
 export default () => (
-  <Box flexDirection="column" padding={1}>
-    <Box>
-      <Gradient name="rainbow">
-        <BigText text="I'm|a Front End Developer." />
-      </Gradient>
+  <>
+    <Box borderStyle="classic" borderColor="green" width={60} height={4}>
+      <Text color="greenBright" padding-right={10}>
+        Hello World! I'm Gen Tamura.<Newline />
+        I'm a Web Frontend Developer in Japan.
+      </Text>
     </Box>
-    <Box>
-      <SelectInput items={items} onSelect={(item) => actions(item.label)} itemComponent={ItemView} />
+    <Box flexDirection="column" padding={1}>
+      <Box>
+        <Text>Please select from the following:</Text>
+      </Box>
+      <Box>
+        <SelectInput items={items} onSelect={(item) => actions(item.label)} itemComponent={ItemView} />
+      </Box>
     </Box>
-  </Box>
+  </>
 );
