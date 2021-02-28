@@ -1,7 +1,7 @@
 {
   "name": "gentamura-cli",
   "description": "gentamura's information",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "main": "dist/cli.js",
   "bin": {
     "gentamura": "./bin/main.js"
